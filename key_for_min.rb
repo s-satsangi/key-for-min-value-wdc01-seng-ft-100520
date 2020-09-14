@@ -11,6 +11,8 @@
 # That seems like a hacky thing, so this is 
 #how I'm doing it
 def key_for_min_value(name_hash)
+
+  #copy values to an array, find the min
   array_to_search = name_hash.map{|key, val| val}
   count=0
   min = array_to_search[0]
@@ -21,4 +23,12 @@ def key_for_min_value(name_hash)
     count += 1
   end
   
+  #now back through the hash for the key
+  
+  name_hash.each do |key, value|
+    if value == min
+      min_key = key
+    end
+  end
+  min_key
 end
