@@ -15,6 +15,7 @@ def key_for_min_value(name_hash)
   #copy values to an array, find the min
   array_to_search = name_hash.map{|key, val| val}
   count=0
+  min_key = nil
   min = array_to_search[0]
   while count < array_to_search.count do 
     if array_to_search[count]<min
