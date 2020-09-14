@@ -11,5 +11,14 @@
 # That seems like a hacky thing, so this is 
 #how I'm doing it
 def key_for_min_value(name_hash)
-  array_to_search
+  array_to_search = name_hash.map{|key, val| val}
+  count=0
+  min = array_to_search[0]
+  while count < array_to_search.count do 
+    if array_to_search[count]<min
+      min = array_to_search[count]
+    end
+    count += 1
+  end
+  
 end
